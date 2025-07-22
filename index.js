@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 app.use(cors());
+app.use(express.static('dist'));
 
 morgan.token('postReq', function getPostData(req) {
   return JSON.stringify(req.newPerson);
